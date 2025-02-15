@@ -1,6 +1,9 @@
+/* eslint-disable */
+
 import { createContext, useContext, useState } from "react";
 
 // Create Context
+//es
 const SidebarContext = createContext({ activeItem: "Home", setActiveItem: (item: string) => {} });
 
 export function SidebarProvider({ children }: { children: React.ReactNode }) {

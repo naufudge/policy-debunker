@@ -1,3 +1,4 @@
+import NumberStats from "@/components/home/NumberStats";
 import Recent from "@/components/home/recent";
 
 export default function Home() {
@@ -11,16 +12,24 @@ export default function Home() {
       </div>
 
       <div className="text-white grid grid-cols-11 gap-6 xl:gap-10 h-screen">
-        <div className="col-span-8 grid grid-cols-6 gap-6 xl:gap-10 h-fit">
-          <div className="bg-[#4a4a4a] rounded-xl h-[300px] opacity-50 col-span-4">
+        <div className="col-span-8 grid grid-cols-8 gap-6 xl:gap-10 h-fit">
+          <div className="bg-[#4a4a4a] rounded-xl h-[300px] opacity-50 col-span-5">
 
           </div>
 
-          <div className="bg-[#3E4EA5] rounded-xl h-[300px] opacity-75 col-span-2">
+          <div className="bg-[#3E4EA5] rounded-xl h-[300px] opacity-75 col-span-3">
 
           </div>
 
-          <div className="bg-[#4a4a4a] rounded-xl h-[250px] opacity-50 col-span-3">
+          <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-3">
+            <NumberStats
+            heading="Working Population"
+            number={"411,112"}
+            percentage={"12.5%"}
+            />
+          </div>
+
+          <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-5">
 
           </div>
         </div>

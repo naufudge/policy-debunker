@@ -38,7 +38,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
   return (
     <Layout className="h-screen font-poppins bg-[#27292C] text-white" hasSider>
-      <Sider className="bg-transparent pt-16 flex justify-center h-full">
+      <Sider className="bg-transparent pt-10 flex justify-center h-full">
         <div className="h-fit w-[70px] bg-[#4a4a4a] bg-blend-overlay rounded-full grid grid-cols-1 place-items-center gap-4 xl:gap-10">
           {SideBarLinsk.map((link, index) => (
             <div
@@ -57,7 +57,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
         </div>
       </Sider>
-      <Content className="px-8 py-16">
+      <Content className="px-8 py-10">
         
         {children}
       </Content>
