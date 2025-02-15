@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import MainLayout from "@/components/MainLayout";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   description: "The policy making dashboard for you.",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
-        {children}
+        <MainLayout>
+          {children}
+        </MainLayout>
       </body>
     </html>
   );
