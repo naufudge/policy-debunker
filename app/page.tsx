@@ -1,6 +1,7 @@
+import { LineStats } from "@/components/home/LineStats";
 import NumberStats from "@/components/home/NumberStats";
-import PieCharts from "@/components/home/PieChart";
-import Recent from "@/components/home/recent";
+import PieStats from "@/components/home/PieStats";
+import Recent from "@/components/home/Recent";
 
 export default function Home() {
   return (
@@ -14,12 +15,12 @@ export default function Home() {
 
       <div className="text-white grid grid-cols-11 gap-6 xl:gap-10 h-screen">
         <div className="col-span-8 grid grid-cols-8 gap-6 xl:gap-10 h-fit">
-          <div className="bg-[#4a4a4a] rounded-xl h-[300px] opacity-50 col-span-5">
-
+          <div className="bg-[#4a4a4a] rounded-xl h-full bg-opacity-50 col-span-5">
+            <LineStats heading="Employment to Population" />
           </div>
 
-          <div className="bg-[#3E4EA5] rounded-xl h-[300px] opacity-75 col-span-3">
-            <PieCharts />
+          <div className="bg-[#3E4EA5] rounded-xl h-full opacity-75 col-span-3">
+            <PieStats />
           </div>
 
           <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-3">
@@ -36,7 +37,7 @@ export default function Home() {
         </div>
 
         <div className="col-span-3 h-full">
-          <div className="bg-[#4a4a4a] rounded-xl h-[600px] opacity-50 col-span-4">
+          <div className="bg-[#4a4a4a] rounded-xl h-[600px] bg-opacity-50 col-span-4">
             <Recent />
           </div>
 
