@@ -2,6 +2,7 @@ import { LineStats } from "@/components/home/LineStats";
 import NumberStats from "@/components/home/NumberStats";
 import PieStats from "@/components/home/PieStats";
 import Recent from "@/components/home/Recent";
+import BarStats from "@/components/home/BarStats";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           </div>
 
           <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-5">
+          <BarStats />
 
           </div>
         </div>
