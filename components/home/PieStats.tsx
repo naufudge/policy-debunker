@@ -10,6 +10,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { OpenStatsData } from "@/lib/MyTypes";
+import axios from "axios";
 
 const chartData = [
   { gender: "male", visitors: 275, fill: "var(--color-male)" },
@@ -31,9 +33,21 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export default function PieStats() {
+  const [data, setData] = React.useState<OpenStatsData>()
+  
   const totalVisitors = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
   }, []);
+
+  React.useEffect(() => {
+    async function getData() {
+      const response = await axios.get("/api/file")
+      setData(response.data)
+      console.log(response.data)
+    }
+
+    getData()
+  }, [])
 
   return (
     <div className="p-8 h-full">

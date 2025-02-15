@@ -24,7 +24,7 @@ export default function Home() {
             <PieStats />
           </div>
 
-          <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-3">
+          <div className="bg-[#4a4a4a] rounded-xl bg-opacity-50 col-span-3">
             <NumberStats
             heading="Working Population"
             number={"411,112"}
@@ -32,14 +32,14 @@ export default function Home() {
             />
           </div>
 
-          <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-5">
+          <div className="bg-[#4a4a4a] rounded-xl h-full bg-opacity-50 col-span-5">
           <BarStats />
 
           </div>
         </div>
 
         <div className="col-span-3 h-full">
-          <div className="bg-[#4a4a4a] rounded-xl h-[600px] bg-opacity-50 col-span-4">
+          <div className="bg-[#4a4a4a] rounded-xl h-[750px] bg-opacity-50 col-span-4">
             <Recent />
           </div>
 

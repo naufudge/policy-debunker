@@ -26,9 +26,9 @@ const chartConfig = {
 } satisfies ChartConfig
 export default function BarStats() {
   return (
-    <div className="p-8 h-full">
-
-        <ChartContainer config={chartConfig}>
+    <div className="p-8 flex flex-col gap-4">
+        <h1 className="font-medium text-xl">Tourist Arrivals</h1>
+        <ChartContainer config={chartConfig} className="max-h-[200px]">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis

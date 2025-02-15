@@ -24,7 +24,13 @@ const ChatPage = () => {
       text: chat,
       sender: "user",
       forecast: ""
-    }];
+    },
+    {
+      text: "Typing...",
+      sender: "bot",
+      forecast: "",
+    }  
+  ];
 
     setCurrentConvo(tempCurrentConvo)
 
@@ -32,6 +38,8 @@ const ChatPage = () => {
     const response = await axios.post("/api/chat", {query: chat})
     const responseData = response.data
     
+    tempCurrentConvo.pop()
+
     tempCurrentConvo = [...tempCurrentConvo, {
       text: responseData.response,
       sender: "bot",
@@ -45,16 +53,16 @@ const ChatPage = () => {
     <div className="flex h-full">
       {/* Chat Area */}
       <div className="flex-1 flex flex-col bg-[#4a4a4a] bg-opacity-50 rounded-xl">
-        <header className="shadow p-4 text-lg font-semibold">
-          <h1 className="font-bold text-[1.5rem] text-white">File Name</h1>
+        <header className="shadow p-4 px-6 text-lg font-semibold">
+          <h1 className="font-bold text-[1.5rem] text-white">Insight</h1>
         </header>
 
         {/* Messages Display */}
-        <main className="flex-1 p-4 overflow-y-auto">
+        <main className="flex-1 p-6 overflow-y-auto">
           {currentConvo.map((msg, index) => (
             <div
               key={index}
-              className={`p-4 my-2 rounded-xl max-w-[25%] flex flex-col gap-2 ${
+              className={`p-4 my-2 rounded-xl max-w-[35%] bg-opacity-90 flex flex-col gap-2 ${
                 msg.sender === "user"
                   ? "bg-blue-500 text-white self-end ml-auto"
                   : "bg-gray-200"
@@ -68,7 +76,7 @@ const ChatPage = () => {
         </main>
 
         {/* Input and Send Button */}
-        <footer className="p-4 rounded-xl bg-[#4a4a4a] flex items-center ">
+        <footer className="p-4 px-6 rounded-xl bg-[#4a4a4a] flex items-center ">
           <input
             id="chatBox"
             type="text"
