@@ -1,7 +1,7 @@
 import { LineStats } from "@/components/home/LineStats";
 import NumberStats from "@/components/home/NumberStats";
 import PieStats from "@/components/home/PieStats";
-import Recent from "@/components/home/Recent";
+import Recent from "@/components/home/recent";
 import BarStats from "@/components/home/BarStats";
 
 export default function Home() {
@@ -26,15 +26,14 @@ export default function Home() {
 
           <div className="bg-[#4a4a4a] rounded-xl bg-opacity-50 col-span-3">
             <NumberStats
-            heading="Working Population"
-            number={"411,112"}
-            percentage={"12.5%"}
+              heading="Working Population"
+              number={"411,112"}
+              percentage={"12.5%"}
             />
           </div>
 
           <div className="bg-[#4a4a4a] rounded-xl h-full bg-opacity-50 col-span-5">
-          <BarStats />
-
+            <BarStats />
           </div>
         </div>
 
@@ -42,7 +41,6 @@ export default function Home() {
           <div className="bg-[#4a4a4a] rounded-xl h-[750px] bg-opacity-50 col-span-4">
             <Recent />
           </div>
-
         </div>
       </div>
     </div>
