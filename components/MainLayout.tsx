@@ -45,7 +45,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             onClick={() => handleSideBarClick(link.link, link.name)}
             key={index}
               className={`rounded-full ${
-                activeItem === link.name ? "bg-[#3E4EA5]" : "bg-[#717171]"
+                activeItem === link.name ? "bg-[#717171]" : "bg-[#717171]"
               } w-full aspect-square flex place-items-center justify-center hover:bg-[#ADB7CD] hover:cursor-pointer transition-all duration-200`}
             >
                 {link.icon}
