@@ -27,7 +27,6 @@ const SideBarLinsk = [
 ];
 
 const MainLayout: React.FC<Props> = ({ children }) => {
-    const [currentPage, setCurrentPage] = useState("")
   const router = useRouter();
   const { activeItem, setActiveItem } = useSidebar()
 
@@ -58,7 +57,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
         </div>
       </Sider>
-      <Content className="p-16">
+      <Content className="px-8 py-16">
         
         {children}
       </Content>
