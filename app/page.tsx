@@ -1,4 +1,5 @@
 import NumberStats from "@/components/home/NumberStats";
+import PieChart from "@/components/home/PieChart";
 import Recent from "@/components/home/recent";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
           </div>
 
           <div className="bg-[#3E4EA5] rounded-xl h-[300px] opacity-75 col-span-3">
-
+            <PieChart />
           </div>
 
           <div className="bg-[#4a4a4a] rounded-xl h-[250px] bg-opacity-50 col-span-3">
