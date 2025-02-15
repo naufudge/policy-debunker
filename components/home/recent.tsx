@@ -11,12 +11,12 @@ const Recent = () => {
   ];
 
   return (
-    <div className="p-10">
+    <div className="px-8 p-6">
       <h1 className="font-poppins text-[1.5rem] text-white">Recent</h1>
       <div className="mt-6 space-y-4">
         {posts.map(post => (
-          <div key={post.id} className="p-6 bg-white rounded-lg shadow-md">
-            <h2 className="font-poppins text-xl font-semibold">{post.title}</h2>
+          <div key={post.id} className="p-6 bg-[#717171] rounded-xl">
+            <h2 className="font-poppins text-">{post.title}</h2>
             <div className="mt-2 text-gray-600">
               <p>{post.time}</p>
               <p>{post.week}</p>

@@ -33,7 +33,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   const handleSideBarClick = (clickedLink: string, linkName: string) => {
       setActiveItem(linkName);
       router.push(clickedLink);
-      setTimeout(() => location.reload(), 200)
+      setTimeout(() => location.reload(), 300)
   };
 
   return (

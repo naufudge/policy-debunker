@@ -41,7 +41,7 @@ export default function PieStats() {
       <div className="mx-auto w-full flex justify-center 2xl:scale-150 2xl:my-16">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square h-[250px]"
+          className="mx-auto aspect-square h-[270px]"
         >
             <PieChart>
               <ChartTooltip
@@ -86,13 +86,13 @@ export default function PieStats() {
                 />
               </Pie>
 
-              {/* <ChartLegend className="w-fit" content={<ChartLegendContent />} /> */}
+              <ChartLegend className="w-fit mx-auto" content={<ChartLegendContent />} />
 
             </PieChart>
         </ChartContainer>
       </div>
       
-      <div className="justify-center text-center">
+      <div className="justify-center text-center text-[12px] opacity-70 italic mt-2">
         The current strength of the Maldivian workforce.
       </div>
     </div>
