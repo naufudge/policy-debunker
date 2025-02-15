@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState, useRef } from "react";
-import { Menu, X, Send } from "lucide-react";
+import React, { useRef } from "react";
+import { Send } from "lucide-react";
 
 const ChatPage = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
   const messagesEndRef = useRef(null);
 
   const messages = [
