@@ -44,7 +44,7 @@ const ChatPage = () => {
       {/* Chat Area */}
       <div className="flex-1 flex flex-col">
         <header className="bg-white shadow p-4 text-lg font-semibold">
-          ChatGPT Clone
+          OpenStats
         </header>
         
         {/* Messages Display */}
