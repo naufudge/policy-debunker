@@ -19,7 +19,7 @@ export default function Home() {
             <LineStats heading="Employment to Population" />
           </div>
 
-          <div className="bg-[#3E4EA5] rounded-xl h-full opacity-75 col-span-3">
+          <div className="bg-[#3E4EA5] rounded-xl h-full bg-opacity-75 col-span-3">
             <PieStats />
           </div>
 

@@ -33,7 +33,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   const handleSideBarClick = (clickedLink: string, linkName: string) => {
       setActiveItem(linkName);
       router.push(clickedLink);
-      setTimeout(() => location.reload(), 300)
+      // setTimeout(() => location.reload(), 300)
   };
 
   return (
@@ -52,6 +52,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             </div>
           ))}
         </div>
+
         {/* User Avatar will be bleow */}
         <div className="place-items-center flex">
 
