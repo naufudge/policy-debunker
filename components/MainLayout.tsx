@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Layout } from "antd";
 import {
   ChartColumnIncreasing,
@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useSidebar } from "./sidebar/SideBarContext";
 
 const { Content, Sider } = Layout;
 
@@ -26,12 +27,14 @@ const SideBarLinsk = [
 ];
 
 const MainLayout: React.FC<Props> = ({ children }) => {
+    const [currentPage, setCurrentPage] = useState("")
   const router = useRouter();
+  const { activeItem, setActiveItem } = useSidebar()
+
   const handleSideBarClick = (clickedLink: string, linkName: string) => {
-      localStorage.setItem("sidebarCurrent", linkName);
+      setActiveItem(linkName);
       router.push(clickedLink);
       setTimeout(() => location.reload(), 200)
-    //   location.reload()
   };
 
   return (
@@ -43,18 +46,22 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             onClick={() => handleSideBarClick(link.link, link.name)}
             key={index}
               className={`rounded-full ${
-                localStorage.getItem("sidebarCurrent") === link.name ? "bg-[#3E4EA5]" : "bg-[#717171]"
+                activeItem === link.name ? "bg-[#3E4EA5]" : "bg-[#717171]"
               } w-full aspect-square flex place-items-center justify-center hover:bg-[#ADB7CD] hover:cursor-pointer transition-all duration-200`}
             >
                 {link.icon}
-              
             </div>
           ))}
         </div>
         {/* User Avatar will be bleow */}
-        <div className="place-items-center flex"></div>
+        <div className="place-items-center flex">
+
+        </div>
       </Sider>
-      <Content>{children}</Content>
+      <Content className="p-16">
+        
+        {children}
+      </Content>
     </Layout>
   );
 };
